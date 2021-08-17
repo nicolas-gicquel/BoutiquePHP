@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center form_container">
-                    <form>
+                    <form action="users/connexion.php" method="post">
                         <div class="input-group mb-3">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>
@@ -22,11 +22,11 @@
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                             </div>
-                            <input type="password" name="pwd" class="form-control input_pass" value="" placeholder="password">
+                            <input type="password" name="mdp" class="form-control input_pass" value="" placeholder="password">
                         </div>
                         
                         <div class="d-flex justify-content-center mt-3 login_container">
-                            <button type="button" name="button" class="btn login_btn">Connexion</button>
+                            <button type="submit" name="button" class="btn login_btn">Connexion</button>
                         </div>
                     </form>
                 </div>
