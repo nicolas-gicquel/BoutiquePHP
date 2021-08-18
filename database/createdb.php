@@ -38,6 +38,14 @@ try{
 
   $pdo->exec($sql);
 
+  $sql = "CREATE TABLE IF NOT EXISTS `boutiquephp`.`categories` ( 
+    `categoryId` INT NOT NULL AUTO_INCREMENT , 
+    `nameCategory` VARCHAR(255) NOT NULL , 
+    `dateCreate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
+    PRIMARY KEY (`categoryId`)) ENGINE = InnoDB;";
+
+  $pdo->exec($sql);
+
     
  
     echo 'Félicitations, les tables ont été créée';
