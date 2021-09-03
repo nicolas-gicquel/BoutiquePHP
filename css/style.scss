@@ -76,3 +76,12 @@ html {
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
     background-color: #c0392b !important;
 }
+
+.logo {
+    width: 140px;
+}
+
+header {
+    background-image: url("../img/peleton.png");
+    background-size: cover;
+}
