@@ -38,7 +38,7 @@ $categories = $req2->fetchAll(PDO::FETCH_ASSOC);
             ?>
 
         </select>
-        <input type="number" name="price" placeholder="Prix du produit">
+        <input type="number" step="0.01" name="price" placeholder="Prix du produit">
         <input type="number" name="stockProduct" placeholder="Produits en stock">
         <input type="file" name="imageProduct">
         <textarea name="descriptionProduct" cols="30" rows="10">Description du produit</textarea>
@@ -60,7 +60,7 @@ $categories = $req2->fetchAll(PDO::FETCH_ASSOC);
                <tr>
                    <td><?= $value['nameProduct']?></td>
                    <td><?= $value['nameCategory']?></td>
-                   <td><?= $value['price']?></td>
+                   <td><?= $value['price']?>€</td>
                    <td><?= $value['stockProduct']?></td>
                    <td><?= $value['descriptionProduct']?></td>
                    <td><img src="../img/<?= $value['imageProduct']?>" alt="image produit"  width=150 height=100></td>
