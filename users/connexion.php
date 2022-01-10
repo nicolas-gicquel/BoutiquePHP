@@ -28,7 +28,7 @@ try {
             $_SESSION['idUtilisateur'] = $resultat['idUtilisateur'];
             $_SESSION['firstname'] = $resultat['firstname'];
             $_SESSION['lastname'] = $resultat['lastname'];
-            header("location:../index.php");
+            header("location:../admin.php");
         } else {
             header("location:../login.php");
         }

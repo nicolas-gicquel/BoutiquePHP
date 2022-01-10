@@ -32,9 +32,9 @@ try{
       `price` FLOAT NOT NULL ,
       `stockProduct` INT NOT NULL ,
       `descriptionProduct` TEXT NOT NULL ,
-      `categoryId`,
+      `categoryId` INT(5),
       `dateCreate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
-      PRIMARY KEY (`idUser`)) ENGINE = InnoDB;";
+      PRIMARY KEY (`idProduct`)) ENGINE = InnoDB;";
 
   $pdo->exec($sql);
 

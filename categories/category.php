@@ -27,7 +27,7 @@ $categories = $req1->fetchAll(PDO::FETCH_ASSOC);
 <ul>
     <?php
         foreach ($categories as $key => $value) {
-            echo "<li>$value[nomCategorie]</li>";
+            echo "<li>$value[nameCategory]</li>";
         }
     ?>
 </ul>
