@@ -53,6 +53,7 @@ $categories = $req2->fetchAll(PDO::FETCH_ASSOC);
             <th>Stock</th>
             <th>Description</th>
             <th>Image</th>
+            <th>Action</th>
         </thead>
         <tbody>
             <?php
@@ -64,6 +65,7 @@ $categories = $req2->fetchAll(PDO::FETCH_ASSOC);
                    <td><?= $value['stockProduct']?></td>
                    <td><?= $value['descriptionProduct']?></td>
                    <td><img src="../img/<?= $value['imageProduct']?>" alt="image produit"  width=150 height=100></td>
+                   <td><a href="updateProduct.php?id=<?= $value['idProduct'] ?>">Modifier</a><a href="deleteProduct.php?id=<?= $value['idProduct'] ?>">X</a></td>
                </tr>
             <?php
             }
