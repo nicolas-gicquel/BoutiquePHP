@@ -32,6 +32,7 @@ try{
       `price` FLOAT NOT NULL ,
       `stockProduct` INT NOT NULL ,
       `descriptionProduct` TEXT NOT NULL ,
+      `imageProduct` VARCHAR(255) NOT NULL ,
       `categoryId` INT(5),
       `dateCreate` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
       PRIMARY KEY (`idProduct`)) ENGINE = InnoDB;";
