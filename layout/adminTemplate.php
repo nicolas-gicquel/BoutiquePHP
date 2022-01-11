@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="../assets/images/favicon.png" />
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -32,8 +33,8 @@
 
         <!-- partial:partials/_sidebar.html -->
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
-            <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center fixed-top">
-                <a class="sidebar-brand brand-logo" href="index.html"><img src="img/logo.jpg" alt="logo" height="100px" /></a>
+            <div class="sidebar-brand-wrapper d-none d-lg-flex align-items-center justify-content-center">
+                <a class="sidebar-brand brand-logo" href="index.html"><img class="logoAdmin" src="../img/logo.jpg" alt="logo" height="100px" /></a>
                 <a class="sidebar-brand brand-logo-mini" href="index.html"><img src="img/logo.jpg" alt="logo" /></a>
             </div>
             <ul class="nav">
