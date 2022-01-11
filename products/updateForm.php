@@ -1,12 +1,10 @@
 <?php
 
-
-
-
+include '../database/connexion.php';
 
 if ($_POST) {
     $id = $_POST['idProduit'];
-    
+
     $req1 = $pdo->prepare("SELECT * FROM products WHERE idProduct = $id");
     $req1->execute();
     $client = $req1->fetch();
@@ -21,21 +19,37 @@ if ($_POST) {
     var_dump($descriptionProduct);
     $categoryId = $_POST['categoryId'];
     var_dump($categoryId);
-    $imageProduct = $_FILES['imageProduct']['name'];
-    var_dump($imageProduct);
+    /*On vérifie si une nouvelle image a été ajoutée*/
+    if (empty($_FILES['imageProduct'])) {
+        $imageProduct = $_FILES['imageProduct']['name'];
+        var_dump($imageProduct);
 
-    $req2 = $pdo->prepare("UPDATE `products` 
-                        SET `nameProduct`= :nameProduct ,`price`= :price,`stockProduct`= :stockProduct,`descriptionProduct`= :descriptionProduct,`categoryId`= :categoryId,`imageProduct`= :imageProduct 
+        $req2 = $pdo->prepare("UPDATE `products` 
+                        SET `nameProduct`= :nameProduct ,`price`= :price,`stockProduct`= :stockProduct,`descriptionProduct`= :descriptionProduct,`categoryId`= :categoryId,`imageProduct`= :imageProduct
                         WHERE idClient = $id");
 
-    $req2->execute(array(
-        ':nameProduct' => $nameCategory,
-        ':price' => $price,
-        ':stockProduct' => $stockProduct,
-        ':descriptionProduct' => $descriptionProduct,
-        ':categoryId' => $categoryId,
-        ':imageProduct' => $imageProduct
-    ));
+        $req2->execute(array(
+            ':nameProduct' => $nameCategory,
+            ':price' => $price,
+            ':stockProduct' => $stockProduct,
+            ':descriptionProduct' => $descriptionProduct,
+            ':categoryId' => $categoryId,
+            ':imageProduct' => $imageProduct
+        ));
+    } else {
 
-    header('location:products.php');
+        $req2 = $pdo->prepare("UPDATE `products` 
+                        SET `nameProduct`= :nameProduct ,`price`= :price,`stockProduct`= :stockProduct,`descriptionProduct`= :descriptionProduct,`categoryId`= :categoryId 
+                        WHERE idProduct = $id");
+
+        $req2->execute(array(
+            ':nameProduct' => $nameCategory,
+            ':price' => $price,
+            ':stockProduct' => $stockProduct,
+            ':descriptionProduct' => $descriptionProduct,
+            ':categoryId' => $categoryId,
+            
+        ));
+    }
+    header('location:index.php');
 }

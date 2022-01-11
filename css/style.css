@@ -6,6 +6,10 @@ html {
   background: #60a3bc !important;
 }
 
+.alignLeft {
+  text-align: left;
+}
+
 .user_card {
   height: 400px;
   width: 350px;
@@ -114,5 +118,49 @@ header {
 
 .sidebar .nav {
   padding-top: 10px;
+}
+
+/******************************Admin content********************************/
+th,
+td {
+  text-align: center;
+}
+
+table img {
+  display: block;
+  margin: auto;
+}
+
+table .border-bottom {
+  margin-bottom: 15px;
+}
+
+table .border-bottom td {
+  padding-bottom: 5px;
+}
+
+.actionTable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.actionTable .mdi-delete {
+  color: #fc424a;
+  font-size: 30px;
+  text-align: center;
+}
+
+.actionTable .mdi-update {
+  color: #58d8a3;
+  font-size: 30px;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

@@ -22,27 +22,31 @@ if ($_GET['id']) {
 }
 
 ?>
+<h1>Modification d'un produit</h1>
+<div class="card grid-margin">
+    <div class="card-body">
+        <form class="form-group" action="updateForm.php" method="post" enctype="multipart/form-data">
+            <input type="text" name="nameProduct" value="<?= $product['nameProduct'] ?>">
+            <select name="categoryId">
+                <option value="<?= $product['categoryId'] ?>"><?= $product['categoryId'] ?></option>
+                <?php
+                foreach ($categories as $key => $value) { ?>
+                    <option value="<?= $value['categoryId'] ?>"><?= $value['nameCategory'] ?></option>
+                <?php
+                }
+                ?>
 
-    <form class="form-group" action="updateFormProduct.php" method="post" enctype="multipart/form-data">
-        <input type="text" name="nameProduct" value="<?= $product['nameProduct']?>">
-        <select name="categoryId">
-            <option value="<?= $product['categoryId'] ?>"><?= $product['categoryId'] ?></option>
-            <?php
-            foreach ($categories as $key => $value) { ?>
-                <option value="<?= $value['categoryId'] ?>"><?= $value['nameCategory'] ?></option>
-            <?php
-            }
-            ?>
+            </select>
+            <input type="number" step="0.01" name="price" value="<?= $product['price'] ?>">
+            <input type="number" name="stockProduct" value="<?= $product['stockProduct'] ?>">
+            <input type="file" name="imageProduct">
+            <textarea name="descriptionProduct" cols="30" rows="10"><?= $product['descriptionProduct'] ?></textarea>
+            <input type="hidden" name="idProduit" value="<?= $idProduct ?>">
+            <input class="nav-link btn btn-success create-new-button" type="submit" value="Modifier le produit">
+        </form>
 
-        </select>
-        <input type="number" step="0.01" name="price" value="<?= $product['price'] ?>">
-        <input type="number" name="stockProduct" value="<?= $product['stockProduct'] ?>">
-        <input type="file" name="imageProduct">
-        <textarea name="descriptionProduct" cols="30" rows="10"><?= $product['descriptionProduct'] ?></textarea>
-        <input type="submit" value="Créer un nouveau produit">
-    </form>
-
-
+    </div>
+</div>
 <?php
-    include '../layout/adminFooter.php';
+include '../layout/adminFooter.php';
 ?>
