@@ -1,4 +1,7 @@
 <?php
+
+include '../database/connexion.php';
+include '../layout/adminTemplate.php';
 if ($_GET['id']) {
     $idProduct = $_GET['id'];
     $pdo = new PDO(
@@ -19,17 +22,6 @@ if ($_GET['id']) {
 }
 
 ?>
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8">
-    <?php
-    include '../layout/head.php';
-    ?>
-</head>
-
-<body>
 
     <form class="form-group" action="updateFormProduct.php" method="post" enctype="multipart/form-data">
         <input type="text" name="nameProduct" value="<?= $product['nameProduct']?>">
@@ -51,6 +43,6 @@ if ($_GET['id']) {
     </form>
 
 
-</body>
-
-</html>
+<?php
+    include '../layout/adminFooter.php';
+?>

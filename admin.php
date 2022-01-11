@@ -2,7 +2,7 @@
 include 'database/connexion.php';
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -112,16 +112,15 @@ include 'database/connexion.php';
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" data-bs-toggle="collapse" href="products.php" aria-expanded="false" aria-controls="ui-basic">
+            <a class="nav-link"  href="products/index.php">
               <span class="menu-icon">
                 <i class="mdi mdi-laptop"></i>
               </span>
               <span class="menu-title">Gestion des produits</span>
-              <i class="menu-arrow"></i>
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="categories.php">
+            <a class="nav-link" href="categories/index.php">
               <span class="menu-icon">
                 <i class="mdi mdi-playlist-play"></i>
               </span>

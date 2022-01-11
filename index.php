@@ -41,6 +41,7 @@ $categories = $req2->fetchAll(PDO::FETCH_ASSOC);
                         <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                     </button>
                 </form>
+                <a class="btn btn-outline-dark btn-connect" href="login.php">Connexion</a>
             </div>
         </div>
     </nav>
