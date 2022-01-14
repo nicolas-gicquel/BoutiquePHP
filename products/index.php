@@ -1,11 +1,12 @@
 <?php
-session_start();
-if (!$_SESSION) {
-    header('location:../login.php');
-}
+
 include '../database/connexion.php';
 include '../layout/adminTemplate.php';
 
+
+if (!$_SESSION) {
+    header('location:../login.php');
+}
 $req1 = $pdo->prepare("SELECT * FROM products INNER JOIN categories ON products.categoryId = categories.categoryId");
 $req1->execute();
 $products = $req1->fetchAll(PDO::FETCH_ASSOC);

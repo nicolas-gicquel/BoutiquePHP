@@ -1,4 +1,10 @@
 <?php
+session_start();
+$idUser = $_SESSION['idUtilisateur'];
+
+$req1 = $pdo->prepare("SELECT * FROM users WHERE idUser=$idUser");
+$req1->execute();
+$user = $req1->fetch();
 
 ?>
 <!DOCTYPE html>
@@ -44,11 +50,11 @@
                     <div class="profile-desc">
                         <div class="profile-pic">
                             <div class="count-indicator">
-                                <img class="img-xs rounded-circle " src="assets/images/faces/face15.jpg" alt="">
+                                <img class="img-xs rounded-circle " src="../img/<?= $user['photoUser']?>" alt="">
                                 <span class="count bg-success"></span>
                             </div>
                             <div class="profile-name">
-                                <h5 class="mb-0 font-weight-normal">Henry Klein</h5>
+                                <h5 class="mb-0 font-weight-normal"><?= $user['firstname']?> <?= $user['lastname']?></h5>
                             </div>
                         </div>
                         <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>

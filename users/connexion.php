@@ -25,7 +25,7 @@ try {
     } else {
         if ($isPasswordCorrect) {
             session_start();
-            $_SESSION['idUtilisateur'] = $resultat['idUtilisateur'];
+            $_SESSION['idUtilisateur'] = $resultat['idUser'];
             $_SESSION['firstname'] = $resultat['firstname'];
             $_SESSION['lastname'] = $resultat['lastname'];
             header("location:../admin.php");
