@@ -128,7 +128,7 @@ include 'database/connexion.php';
             </a>
           </li>
           <li class="nav-item menu-items">
-            <a class="nav-link" href="users.php">
+            <a class="nav-link" href="users/index.php">
               <span class="menu-icon">
                 <i class="mdi mdi-table-large"></i>
               </span>

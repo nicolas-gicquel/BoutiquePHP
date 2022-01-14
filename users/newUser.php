@@ -1,10 +1,6 @@
 <?php
-try {
     include '../database/connexion.php';
 
-} catch (PDOException $e) {
-    echo "Erreur : " . $e->getMessage();
-}
 
 ?>
 

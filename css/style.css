@@ -163,4 +163,15 @@ table .border-bottom td {
   font-size: 30px;
   text-align: center;
 }
+
+/************************register.php************************/
+.card-form {
+  max-width: 600px;
+  display: block;
+  margin: 50px auto;
+}
+
+.card-form h2 {
+  text-align: center;
+}
 /*# sourceMappingURL=style.css.map */

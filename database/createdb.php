@@ -21,6 +21,7 @@ try{
         `postalCode` VARCHAR(13) NOT NULL ,
         `city` VARCHAR(255) NOT NULL ,
         `role` ENUM('ADMIN', 'EDITOR', 'USER') ,
+        `photoUser` VARCHAR(255) ,
         `dateRegister` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP , 
         PRIMARY KEY (`idUser`)) ENGINE = InnoDB;";
  

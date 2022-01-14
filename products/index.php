@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!$_SESSION) {
+    header('location:../login.php');
+}
 include '../database/connexion.php';
 include '../layout/adminTemplate.php';
 
@@ -72,6 +76,3 @@ $categories = $req2->fetchAll(PDO::FETCH_ASSOC);
 <?php
 include '../layout/adminFooter.php';
 ?>
-</body>
-
-</html>

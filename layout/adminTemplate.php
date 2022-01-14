@@ -22,8 +22,10 @@
     <!-- inject:css -->
     <!-- endinject -->
     <!-- Layout styles -->
+    
     <link rel="stylesheet" href="../assets/css/style.css">
     <!-- End layout styles -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
     <link rel="shortcut icon" href="../assets/images/favicon.png" />
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -98,7 +100,7 @@
                     </a>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="products/index.php">
+                    <a class="nav-link" href="http://localhost/BoutiquePHP/products/">
                         <span class="menu-icon">
                             <i class="mdi mdi-laptop"></i>
                         </span>
@@ -106,7 +108,7 @@
                     </a>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="categories/index.php">
+                    <a class="nav-link" href="http://localhost/BoutiquePHP/categories/">
                         <span class="menu-icon">
                             <i class="mdi mdi-playlist-play"></i>
                         </span>
@@ -114,7 +116,7 @@
                     </a>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="users.php">
+                    <a class="nav-link" href="http://localhost/BoutiquePHP/users">
                         <span class="menu-icon">
                             <i class="mdi mdi-table-large"></i>
                         </span>

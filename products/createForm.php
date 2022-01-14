@@ -4,12 +4,12 @@ array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if ($_POST) {
-        $nameCategory = $_POST['nameProduct'];var_dump($nameCategory);
-        $price = $_POST['price'];var_dump($price);
-        $stockProduct = $_POST['stockProduct'];var_dump($stockProduct);
-        $descriptionProduct = $_POST['descriptionProduct'];var_dump($descriptionProduct);
-        $categoryId = $_POST['categoryId'];var_dump($categoryId);
-        $imageProduct = $_FILES['imageProduct']['name'];var_dump($imageProduct);
+        $nameCategory = htmlspecialchars($_POST['nameProduct']);
+        $price = $_POST['price'];
+        $stockProduct = $_POST['stockProduct'];
+        $descriptionProduct = htmlentities($_POST['descriptionProduct']);
+        $categoryId = $_POST['categoryId'];
+        $imageProduct = $_FILES['imageProduct']['name'];
         if ($nameCategory != "") {
             $req1 = $pdo->prepare("
             INSERT INTO products(nameProduct,price,stockProduct,descriptionProduct,categoryId,imageProduct)
@@ -25,10 +25,10 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 ':imageProduct' => $imageProduct
             ));
 
-            header('location:products.php');
+            header('location:index.php');
         }
         else{
-            header('location:products.php');
+            header('location:index.php');
         }
     }
 
