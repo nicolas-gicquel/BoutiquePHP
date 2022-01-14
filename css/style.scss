@@ -157,6 +157,24 @@ table {
 }
 
 
+/**Products**/
+
+.productForm {
+    display: flex;
+    flex-direction: column;
+    input,
+    select {
+        margin: 20px 0;
+    }
+}
+
+.productSubmit {
+    width: 250px;
+    display: block;
+    margin: auto;
+}
+
+
 /************************register.php************************/
 
 .card-form {
